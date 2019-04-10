@@ -12,6 +12,10 @@ class App extends Component {
     selectedVideo: null
   };
 
+  componentDidMount() {
+    this.onTermSubmit('nier');
+  }
+
   onTermSubmit = async term => {
     const response = await youtube.get('/search', {
       params: {
